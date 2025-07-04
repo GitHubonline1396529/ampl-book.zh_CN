@@ -1,1 +1,6 @@
-.vscode
+# Date: 2025-07-05
+# Description: This file specifies intentionally untracked files to ignore in
+# this Git repository.
+
+# The Visual Studio Code workspace settings directory.
+.vscode/
