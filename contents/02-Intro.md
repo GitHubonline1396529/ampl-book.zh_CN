@@ -51,3 +51,81 @@ We have not attempted to cover the optimization theory and algorithmic details t
 
 
 In addition, AMPL software is readily available for experiment: the AMPL web site, `www.ampl.com`, provides free downloadable “student” versions of AMPL and representative solvers that run on Windows, Unix/Linux, and Mac OS X. These can easily handle problems of a few hundred variables and constraints, including all of the examples in the book. Versions that support much larger problems and additional solvers are also available from a variety of vendors; again, details may be found on the web site. 
+
+## Outline of the book
+
+The second edition, like the first, is organized conceptually into four parts. Chapters 1 through 4 are a tutorial introduction to models for linear programming:
+
+1. Production Models: Maximizing Profits
+2. Diet and Other Input Models: Minimizing Costs
+3. Transportation and Assignment Models
+4. Building Larger Models
+
+These chapters are intended to get you started using AMPL as quickly as possible. They include a brief review of linear programming and a discussion of a handful of simple modeling ideas that underlie most large-scale optimization problems. They also illustrate how to provide the data that convert a model into a specific problem instance, how to solve a problem, and how to display the answers.
+
+The next four chapters describe the fundamental components of an AMPL linear programming model in detail, using more complex examples to examine major aspects of the language systematically:
+
+5. Simple Sets and Indexing
+6. Compound Sets and Indexing
+7. Parameters and Expressions
+8. Linear Programs: Variables, Objectives and Constraints
+
+We have tried to cover the most important features, so that these chapters can serve as a general user’s guide. Each feature is introduced by one or more examples, building on previous examples wherever possible.
+
+The following six chapters describe how to use AMPL in more sophisticated ways:
+
+9. Specifying Data
+10. Database Access
+11. Modeling Commands
+12. Display Commands
+13. Command Scripts
+14. Interactions with Solvers
+
+The first two of these chapters explain how to provide the data values that define a specific instance of a model; Chapter 9 describes AMPL ’s text file data format, while Chapter 10 presents features for access to information in relational database systems. Chapter 11 explains the commands that read models and data, and invoke solvers; Chapter 12 shows how to display and save results. AMPL provides facilities for creating scripts of commands, and for writing loops and conditional statements; these are covered in Chapter 13. Chapter 14 goes into more detail on how to interact with solvers so as to make the best use of their capabilities and the information they provide.
+
+Finally, we turn to the rich variety of problems and applications beyond purely linear models. The remaining chapters deal with six important special cases and generalizations:
+
+15. Network Linear Programs
+16. Columnwise Formulations
+17. Piecewise-Linear Programs
+18. Nonlinear Programs
+19. Complementarity Problems
+20. Integer Linear Programs
+
+Chapters 15 and 16 describe additional language features that help AMPL represent particular kinds of linear programs more naturally, and that may help to speed translation and solution. The last four chapters cover generalizations that can help models to be more realistic than linear programs, although they can also make the resulting optimization problems harder to solve.
+
+Appendix A is the AMPL reference manual; it describes all language features, including some not mentioned elsewhere in the text. Bibliography and exercises may be found in most of the chapters.
+
+## About the second edition
+
+AMPL has evolved a lot in ten years, but its core remains essentially unchanged, and almost all of the models from the first edition work with the current program. Although we have made substantial revisions throughout the text, much of the brand new material is concentrated in the third part, where the original single chapter on the command environment has been expanded into five chapters. In particular, database access, scripts and programming constructs represent completely new material, and many additional AMPL commands for examining models and accessing solver information have been added.
+
+The first edition was written in 1992, just before the explosion in Internet and web use, and while personal computers were still rather limited in their capabilities; the first student versions of AMPL ran on DOS on tiny, slow machines, and were distributed on floppy disks.
+
+Today, the web site at `www.ampl.com` is the central source for all AMPL information and software. Pages at this site cover all that you need to learn about and experiment with optimization and the use of AMPL:
+
+- Free versions of AMPL for a variety of operating systems.
+- Free versions of several solvers for a variety of problem types.
+- All of the model and data files used as examples in this book.
+
+The free software is fully functional, save that it can only handle problems of a few hundred variables and constraints. Unrestricted commercial versions of AMPL and solvers are available as well; see the web site for a list of vendors.
+
+You can also try AMPL without downloading any software, through browser interfaces at `www.ampl.com/TRYAMPL` and the NEOS Server (`neos.mcs.anl.gov`). The AMPL web site also provides information on graphical user interfaces and new AMPL language features, which are under continuing development.
+
+## Acknowledgements to the first edition
+
+We are deeply grateful to Jon Bentley and Margaret Wright, who made extensive comments on several drafts of the manuscript. We also received many helpful suggestions on AMPL and the book from Collette Coullard, Gary Cramer, Arne Drud, Grace Emlin, Gus Gassmann, Eric Grosse, Paul Kelly, Mark Kernighan, Todd Lowe, Bob Richton, Michael Saunders, Robert Seip, Lakshman Sinha, Chris Van Wyk, Juliana Vignali, Thong Vukhac, and students in the mathematical programming classes at Northwestern University. Lorinda Cherry helped with indexing, and Jerome Shepheard with typesetting. Our sincere thanks to all of them.
+
+## Bibliography
+
+E. M. L. Beale, “Matrix Generators and Output Analyzers.”In Harold W. Kuhn (ed.), *Proceedings of the Princeton Symposium on Mathematical Programming*, Princeton University Press (Princeton, NJ, 1970) pp. 25–36. A history and explanation of matrix generator software for linear programming.
+
+Johannes Bisschop and Alexander Meeraus,“On the Development of a General Algebraic Modeling System in a Strategic Planning Environment.” Mathematical Programming Study **20** (1982) pp. 1–29. An introduction to GAMS, one of the first and most widely used algebraic modeling languages.
+
+Robert E. Bixby,“Solving Real-World Linear Programs: A Decade and More of Progress.”Operations Reearch **50** (2002) pp. 3)–15. A history of recent advances in solvers for linear programming. Also in this issue are accounts of the early days of mathematical programming by pioneers of the field.
+
+George B. Dantzig,“Linear Programming: The Story About How It Began.” In Jan Karel Lenstra, Alexander H. G. Rinnooy Kan and Alexander Schrijver, eds., *History of Mathematical Programming: A Collection of Personal Reminiscences*. North-Holland (Amsterdam, 1991) pp. 19–31. A source for our brief account of the history of linear programming. Dantzig was a pioneer of such key ideas as objective functions and the simplex algorithm.
+
+Robert Fourer,“Modeling Languages versus Matrix Generators for Linear Programming.” ACM Transactions on Mathematical Software **9** (1983) pp. 143–183. The case for modeling languages.
+
+C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European Journal of Operational Research **67** (1993) 25–51. A survey.
