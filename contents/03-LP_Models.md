@@ -8,3 +8,18 @@ We begin with a linear program (or LP for short) in only two decision variables,
 
 The separation of model and data is the key to describing more complex linear programs in a concise and understandable fashion. The final example of the chapter illustrates this by presenting several enhancements to the model. 
 
+## A two-variable linear program
+
+An (extremely simplified) steel company must decide how to allocate next week’s time on a rolling mill. The mill takes unfinished slabs of steel as input, and can produce either of two semi-finished products, which we will call bands and coils. (The terminology is not entirely standard; see the bibliography at the end of the chapter for some accounts of realistic LP applications in steelmaking.) The mill’s two products come off the rolling line at different rates:
+
+```
+Tons per hour: Bands 200
+               Coils 140
+```
+
+and they also have different profitabilities:
+
+```
+Profit per ton: Bands $25
+                Coils $30
+```
