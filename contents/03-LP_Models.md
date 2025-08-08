@@ -23,3 +23,21 @@ and they also have different profitabilities:
 Profit per ton: Bands $25
                 Coils $30
 ```
+
+To further complicate matters, the following weekly production amounts are the most that can be justified in light of the currently booked orders:
+
+```
+Maximum tons: Bands 6,000
+              Coils 4,000
+```
+
+The question facing the company is as follows: If 40 hours of production time are available this week, how many tons of bands and how many tons of coils should be produced to bring in the greatest total profit?
+
+ While we are given numeric values for production rates and per-unit profits, the tons of bands and of coils to be produced are as yet unknown. These quantities are the decisionvariableswhose values we must determine so as to maximize profits. The purpose of the linear program is to specify the profits and production limitations as explicit formulas involving the variables, so that the desired values of the variables can be determined systematically.
+
+In an algebraic statement of a linear program, it is customary to use a mathematical shorthand for the variables. Thus we will write $X_B$ for the number of tons of bands to be produced, and $X_C$ for tons of coils. The total hours to produce all these tons is then given by
+
+$$
+(\text{hours to make a ton of bands}) \times X_B + (\text{hours to make a ton of coils}) \times X_C
+$$
+
