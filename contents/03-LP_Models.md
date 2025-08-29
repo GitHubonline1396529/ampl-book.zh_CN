@@ -41,3 +41,35 @@ $$
 (\text{hours to make a ton of bands}) \times X_B + (\text{hours to make a ton of coils}) \times X_C
 $$
 
+This number cannot exceed the 40 hours available. Since hours per ton is the reciprocal of the tons per hour given above, we have a constraint on the variables:
+
+$$
+(1 / 200) X_B + (1 / 140) X_C \leq 40.
+$$
+
+There are also production limits:
+
+$$
+0 \leq X_B \leq 6000
+0 \leq X_C \leq 4000
+$$
+
+In the statement of the problem above, the upper limits were specified, but the lower limits were assumed — it was obvious that a negative production of bands or coils would be meaningless. Dealing with a computer, however, it is necessary to be quite explicit.
+
+By analogy with the formula for total hours, the total profit must be
+
+$$
+(\text{profit per ton of bands}) \times X_B + (\text{profit per ton of coils}) \times X_C
+$$
+
+That is, our objective is to maximize 25 X B + 30 X C. Putting this all together, we have the following linear program:
+
+$$
+\begin{align*}
+  \text{Maximize} \quad & 25 X_B + 30 X_C \\
+  \text{Subject to} 
+    \quad & (1 / 200) X_B + (1 / 140) X_C \leq 40 \\
+    & X_B \leq 6000 \\
+    & X_C \leq 4000
+\end{align*}
+$$
