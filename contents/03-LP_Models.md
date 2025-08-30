@@ -73,3 +73,16 @@ $$
     & X_C \leq 4000
 \end{align*}
 $$
+
+This is a very simple linear program, so we’ll solve it by hand in a couple of ways, and then check the answer with AMPL.
+
+First, by multiplying profit per ton times tons per hour, we can determine the profit per hour of mill time for each product:
+
+```
+Profit per hour: Bands $5,000
+                 Coils $4,200
+```
+
+Bands are clearly a more profitable use of mill time, so to maximize profit we should produce as many bands as the production limit will allow — 6,000 tons, which takes 30 hours. Then we should use the remaining 10 hours to make coils — 1,400 tons in all. The profit is $25 times 6,000 tons plus $30 times 1,400 tons, for a total of $192,000.
+
+Alternatively, since there are only two variables, we can show the possibilities graphically. If $X_B$ values are plotted along the horizontal axis, and $X_C$ values along the vertical axis, each point represents a choice of values, or solution, for the decision variables:
