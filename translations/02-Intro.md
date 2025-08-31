@@ -6,11 +6,11 @@
 
 ## 数学规划
 
-“规划[^1] (Programming)” 这一术语在 1940 年前后已被用于描述大型组织内部活动的计划或调度。那些“计划员” (Programmers) 们发现，他们可以将每项活动的数量或水平表示为一个变量 (Variable)，其数值有待确定。随后，他们能够用数学的方式将计划或调度问题中固有的约束条件 (Constraints) 描述为一组涉及这些变量的方程或不等式。满足所有这些约束条件的解，将被视为可接受的计划或调度方案。
+“规划[^1] (Programming)” 这一术语在 1940 年前后已被用于描述大型组织内部活动的计划或调度。“计划员” (Programmers) 们发现，他们可以将每项活动的数量或水平表示为一个变量 (Variable)，其数值有待确定。随后，他们能够用数学的方式将计划或调度问题中固有的约束条件 (Constraints) 描述为一组涉及这些变量的方程或不等式。满足所有这些约束条件的解，将被视为可接受的计划或调度方案。
 
 实践很快表明：仅仅通过规定约束条件来刻画一个复杂的操作是十分困难的。若约束条件过少，许多劣质的解也能满足它们；若约束条件过多，则会将理想的解排除在外，甚至在最糟糕的情况下可能根本不存在可行解。规划的成功最终依赖于一个得以为上述困境提供出路的关键的洞见。除了约束条件之外，还可以额外指定一个目标 (Objective)——即变量的某个函数 (如成本或利润)，以此判断一个解是否优于另一个解。这样一来，即使有许多不同的解能够满足约束条件，也无关紧要——只需找到一个能使目标函数最小化或最大化的解即可。“数学规划”一词由此被用来描述：在变量受到约束条件限制的情况下，最小化或最大化多变量的目标函数的过程。
 
-In the development and application of mathematical programming, one special case stands out: that in which all the costs, requirements and other quantities of interest are terms strictly proportional to the levels of the activities, or sums of such terms. In mathematical terminology, the objective is a linear function, and the constraints are linear equations and inequalities. Such a problem is called a linear program, and the process of setting up such a problem and solving it is called linear programming. Linear programming is particularly important because a wide variety of problems can be modeled as linear programs, and because there are fast and reliable methods for solving linear programs even with thousands of variables and constraints. The ideas of linear programming are also important for analyzing and solving mathematical programming problems that are not linear. 
+在数学规划的逐步发展与应用过程中，有一类特殊情形愈发凸显：所有成本、需求及其他相关量均严格与各项活动的水平成正比，或是此类各项的和。用数学的术语来讲，这意味着目标函数是一个线性函数 (Linear Function)，而约束条件均是线性的方程与不等式。此类问题被称为线性问题 (Linear Program)，而建立此类问题并求解的过程称为线性规划 (Linear Programming)。线性规划具有特别重要的意义，因为多种多样的问题都可以建模为线性规划，而且即使变量与约束的数量多达数千个，仍能有快速且可靠的方法求解线性规划。同时，线性规划的思想对于分析和求解那些非线性的数学规划问题也很重要。
 
 All useful methods for solving linear programs require a computer. Thus most of the study of linear programming has taken place since the late 1940’s, when it became clear that computers would be available for scientific computing. The first successful computational method for linear programming, the simplex algorithm, was proposed at this time, and was the subject of increasingly effective implementations over the next decade. Coincidentally, the development of computers gave rise to a now much more familiar meaning for the term “programming”. 
 
