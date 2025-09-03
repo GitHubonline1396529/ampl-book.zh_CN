@@ -12,9 +12,9 @@
 
 在数学规划的逐步发展与应用过程中，有一类特殊情形愈发凸显：所有成本、需求及其他相关量均严格与各项活动的水平成正比，或是此类各项的和。用数学的术语来讲，这意味着目标函数是一个线性函数 (Linear Function)，而约束条件均是线性的方程与不等式。此类问题被称为线性问题 (Linear Program)，而建立此类问题并求解的过程称为线性规划 (Linear Programming)。线性规划具有特别重要的意义，因为多种多样的问题都可以建模为线性规划，而且即使变量与约束的数量多达数千个，仍能有快速且可靠的方法求解线性规划。同时，线性规划的思想对于分析和求解那些非线性的数学规划问题也很重要。
 
-所有能够有效求解线性规划的方法都需要借助计算机。因此，线性规划的研究大多兴起于 20 世纪 40 年代末——当时计算机已明确可用于科学计算领域。首个成功的线性规划计算方法——单纯形法——便是在这一时期提出的，并在随后十年间通过日益高效的实现方式不断完善。巧合的是，计算机的发展使“编程”(programming) 一词拥有了如今更为人熟知的含义。
+所有能够有效求解线性规划的方法都需要借助计算机。因此，线性规划的研究大多兴起于 20 世纪 40 年代末——当时计算机已明确可用于科学计算领域。首个成功的线性规划计算方法——单纯形法——便是在这一时期提出的，并在随后十年间通过日益高效的实现方式不断发展完善。巧合的是，计算机的发展使“编程 (Programming)[^1]”一词拥有了如今更为人熟知的含义。
 
-In spite of the broad applicability of linear programming, the linearity assumption is sometimes too unrealistic. If instead some smooth nonlinear functions of the variables are used in the objective or constraints, the problem is called a nonlinear program. Solving such a problem is harder, though in practice not impossibly so. Although the optimal values of nonlinear functions have been a subject of study for over two centuries, computational methods for solving nonlinear programs in many variables were developed only in recent decades, after the success of methods for linear programming. The field of mathematical programming is thus also known as large scale optimization, to distinguish it from the classical topics of optimization in mathematical analysis. 
+尽管线性规划具有广泛的应用性，但其线性假设有时仍过于理想化。如果在目标函数或约束条件中使用了变量的某些光滑的非线性函数 (Nonlinear Functions)，则该问题被称为非线性规划。此类问题的求解更为困难，但在实践中并非不可能。尽管对非线性函数最优值的研究已持续了两个多世纪，但多变量非线性规划的计算方法直到近几十年，在线性规划方法取得成功之后，才得以发展。因此，数学规划领域也被称为大规模优化 (Large Scale Optimization)，以区别于数学分析中的经典最优化课题。
 
 The assumptions of linear programming also break down if some variables must take on whole number, or integral, values. Then the problem is called integer programming, and in general becomes much harder. Nevertheless, a combination of faster computers and more sophisticated methods have made large integer programs increasingly tractable in recent years. 
 
@@ -129,4 +129,4 @@ Robert Fourer,“Modeling Languages versus Matrix Generators for Linear Programm
 
 C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European Journal of Operational Research **67** (1993) 25–51. A survey.
 
-[^1]: 在英语中，“Programming”具有“规划”和“编程”的双重含义。
+[^1]: 在英语中，“Programming”具有“规划”与“编程”的双重含义。
