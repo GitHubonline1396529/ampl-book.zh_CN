@@ -6,7 +6,9 @@
 
 为方便国内的中文用户访问，本项目主要在国内的 [Gitee](https://gitee.com/) 平台更新，但也会及时推送到 [Github](https://github.com/)。但总的来说，[Gitee](https://gitee.com/) 平台的更新速度还是会比 [Github](https://github.com/) 快一点，所以如果您希望及时获取本项目最新的翻译动态，您可以访问 [Gitee](https://gitee.com/) 上的 [BOXonline_1396529/ampl-book.zh_CN](https://gitee.com/-/ide/project/BOXonline_1396529/ampl-book.zh_CN) (点击链接即可跳转)。
 
-目前这个项目还在计划和试水的阶段，能不能成功还得看有多少人愿意参与和协作。如果您希望帮助完成本翻译项目，您可以直接在 Issue 下留言，或者发送电子邮件到本人的邮箱。
+目前这个项目还在计划和试水的阶段，目前已经有许多人参与到了本项目中来 (详见文末贡献榜)。目前最新的进度是 [lost0427](https://github.com/lost0427)  在 [提交大语言模型翻译版本 · Issue #1 · GitHubonline1396529/ampl-book.zh_CN](https://github.com/GitHubonline1396529/ampl-book.zh_CN/issues/1) 中提供了此书的一个完整的基于 LLM 的机翻版本，目前这个文件置于 [`materials/ampl-book_translated.md`](materials/ampl-book_translated.md)，已上传。读者或参与翻译者可自行查看。
+
+如果您希望帮助完成本翻译项目，您可以直接在 Issue 下留言，或者发送电子邮件到本人的邮箱。
 
 ## 项目策划
 
@@ -41,3 +43,13 @@
 ## 许可证
 
 完成后的项目计划将基于 MIT 许可证发布。详情请参见 [LICENSE](LICENSE) 文件。
+
+## 贡献榜
+
+如下罗列了所有社区开发者为本项目提供的帮助。这里忠实感谢大家的参与。
+
+- [xianhongtao](https://github.com/xianhongtao)，点亮了本项目的第一颗 Star。
+
+- [lost0427](https://github.com/lost0427)，在 [提交大语言模型翻译版本 · Issue #1 · GitHubonline1396529/ampl-book.zh_CN](https://github.com/GitHubonline1396529/ampl-book.zh_CN/issues/1) 中提供了此书的一个完整的基于 LLM 的机翻版本，目前这个文件置于 [`materials/ampl-book_translated.md`](materials/ampl-book_translated.md)，已上传。读者或参与翻译者可自行查看。
+
+
