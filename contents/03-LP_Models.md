@@ -86,3 +86,19 @@ Profit per hour: Bands $5,000
 Bands are clearly a more profitable use of mill time, so to maximize profit we should produce as many bands as the production limit will allow — 6,000 tons, which takes 30 hours. Then we should use the remaining 10 hours to make coils — 1,400 tons in all. The profit is $25 times 6,000 tons plus $30 times 1,400 tons, for a total of $192,000.
 
 Alternatively, since there are only two variables, we can show the possibilities graphically. If $X_B$ values are plotted along the horizontal axis, and $X_C$ values along the vertical axis, each point represents a choice of values, or solution, for the decision variables:
+
+(Insert an image here.)
+
+The horizontal line represents the production limit on coils, the vertical on bands. The diagonal line is the constraint on hours; each point on that line represents a combination of bands and coils that requires exactly 40 hours of production time, and any point downward and to the left requires less than 40 hours.
+
+The shaded region bounded by the axes and these three lines corresponds exactly to the *feasible* solutions — those that satisfy all three constraints. Among all the feasible solutions represented in this region, we seek the one that maximizes the profit.
+
+For this problem, a line of slope $-25/30$ represents combinations that produce the same profit; for example, in the figure below, the line from $(0, 4500)$ to $(5400, 0)$ represents combinations that yield $135,000 profit. Different profits give different but parallel lines in the figure, with higher profits giving lines that are higher and further to the right.
+
+(Insert an image here.)
+
+If we combine these two plots, we can see the profit-maximizing, or *optimal*, feasible solution:
+
+(Insert an image here.)
+
+The line segment for profit equal to $135,000 is partly within the feasible region; any point on this line and within the region corresponds to a solution that achieves a profit of $135,000. On the other hand, the line for $220,000 does not intersect the feasible region at all; this tells us that there is no way to achieve a profit as high as $220,000. Viewed in this way, solving the linear program reduces to answering the following question: Among all profit lines that intersect the feasible region, which is highest and furthest to the right? The answer is the middle line, which just touches the region at one of the corners. This point corresponds to 6,000 tons of bands and 1,400 tons of coils, and a profit of $192,000 — the same as we found before.
