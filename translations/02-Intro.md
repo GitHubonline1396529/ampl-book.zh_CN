@@ -29,9 +29,11 @@
 - 分析结果。
 - 根据需要改进模型和数据，并重复上述过程。
 
-If people could deal with mathematical programs in the same way that solvers do, the formulation and generation phases of modeling might be relatively straightforward. In reality, however, there are many differences between the form in which human modelers understand a problem and the form in which solver algorithms work with it. Conversion from the “modeler’s form” to the “algorithm’s form” is consequently a timeconsuming, costly, and often error-prone procedure.
+如果人们能像求解器那样处理数学规划问题，那么建模中的表述和生成阶段或许会相对来讲更直截了当 (straightforward) 一些。然而现实是，人类建模者理解问题的形式与求解器算法处理问题的形式之间存在诸多差异。因此，将模型的表述从“建模者形式” (modeler’s form) 转换到“算法形式” (algorithm’s form) 是一个耗时、成本高昂且往往容易出错的过程。
 
-In the special case of linear programming, the largest part of the algorithm’s form is the constraint coefficient matrix, which is the table of numbers that multiply all the variables in all the constraints. Typically this is a very sparse (mostly zero) matrix with anywhere from hundreds to hundreds of thousands of rows and columns, whose nonzero elements appear in intricate patterns. A computer program that produces a compact representation of the coefficients is called a matrix generator. Several programming languages have been designed specifically for writing matrix generators, and standard computer programming languages are also often used. 
+在线性规划的特殊情形下，算法形式中最为重大的部分是约束系数矩阵——即所有约束中与所有变量相乘的数值的表格。这通常是一个非常稀疏 (大部分元素为零) 的矩阵，其行数和列数范围从数百到数十万不等，且非零元素呈现错综复杂的分布模式。生成系数矩阵紧凑表示的计算机程序称为矩阵生成器 (matrix generator)。已有若干编程语言被专门设计用于编写矩阵生成器，标准的计算机编程语言也常被应用于此。
+
+虽说矩阵生成器可以成功地自动完成部分从建模者形式到算法形式的转译工作，但它们却始终难以维护和调试。解决这一难题的一种方法是使用一种用于数学规划的建模语言 (modeling language for mathematical programming)。建模语言的设计初衷是以一种可以直接作为计算机系统输入的形式来表达建模者形式。然后，到算法形式的转译可以完全由计算机执行，而无需中间的计算机编程阶段。建模语言可以帮助使数学规划更加可靠和经济；它们在开发新模型和记录应变模型方面特别有优势。
 
 Although matrix generators can successfully automate some of the work of translation from modeler’s form to algorithm’s form, they remain difficult to debug and maintain. One way around much of this difficulty lies in the use of a modeling language for mathematical programming. A modeling language is designed to express the modeler’s form in a way that can serve as direct input to a computer system. Then the translation to the algorithm’s form can be performed entirely by computer, without the intermediate stage of computer programming. Modeling languages can help to make mathematical programming more economical and reliable; they are particularly advantageous for development of new models and for documentation of models that are subject to change. 
 
@@ -129,4 +131,4 @@ Robert Fourer,“Modeling Languages versus Matrix Generators for Linear Programm
 
 C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European Journal of Operational Research **67** (1993) 25–51. A survey.
 
-[^1]: 在英语中，“Programming”具有“规划”与“编程”的双重含义。
+[^1]: **译者注**：在英语中，“Programming”具有“规划”与“编程”的双重含义。
