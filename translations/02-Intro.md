@@ -16,18 +16,18 @@
 
 尽管线性规划具有广泛的应用性，但其线性假设有时仍过于理想化。如果在目标函数或约束条件中使用了变量的某些光滑的非线性函数 (Nonlinear Functions)，则该问题被称为非线性规划。此类问题的求解更为困难，但在实践中并非不可能。尽管对非线性函数最优值的研究已持续了两个多世纪，但多变量非线性规划的计算方法直到近几十年，在线性规划方法取得成功之后，才得以发展。因此，数学规划领域也被称为大规模优化 (Large Scale Optimization)，以区别于数学分析中的经典最优化课题。
 
-The assumptions of linear programming also break down if some variables must take on whole number, or integral, values. Then the problem is called integer programming, and in general becomes much harder. Nevertheless, a combination of faster computers and more sophisticated methods have made large integer programs increasingly tractable in recent years. 
+若某些变量必须取整数值，线性规划的假设条件便会失效。此类问题被称为整数规划 (integer programming)，其求解难度通常显著增加。然而，随着计算机运算速度的提升和计算方法的日益精进，近年来大规模整数规划问题已变得越来越易于处理。
 
-## The AMPL modeling language
+## AMPL 建模语言
 
-Practical mathematical programming is seldom as simple as running some algorithmic method on a computer and printing the optimal solution. The full sequence of events is more like this:
+数学规划的实践往往不像在计算机上运行某种算法并打印最优解那样简单。完整的工作流程更接近于：
 
-- Formulate a model, the abstract system of variables, objectives, and constraints that represent the general form of the problem to be solved.
-- Collect data that define a specific problem instance.
-- Generate a specific objective function and constraint equations from the model and data.
-- Solve the problem instance by running a program, or solver, to apply an algorithm that finds optimal values of the variables.
-- Analyze the results.
-- Refine the model and data as necessary, and repeat.
+- 用数学公式表述一个模型，即构建变量、目标函数和约束条件的抽象系统，用于表示待解问题的一般形式。
+- 收集用以定义一个特定问题实例的数据。
+- 根据模型和数据，生成特定的目标函数和约束。
+- 通过运行一个程序——或者说，求解器 (solver)——来求解该问题实例，应用算法以找到变量的最优值。
+- 分析结果。
+- 根据需要改进模型和数据，并重复上述过程。
 
 If people could deal with mathematical programs in the same way that solvers do, the formulation and generation phases of modeling might be relatively straightforward. In reality, however, there are many differences between the form in which human modelers understand a problem and the form in which solver algorithms work with it. Conversion from the “modeler’s form” to the “algorithm’s form” is consequently a timeconsuming, costly, and often error-prone procedure.
 
