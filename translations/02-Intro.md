@@ -39,9 +39,11 @@
 
 由于建模者用于表达数学规划的形式不止一种，因此建模语言也存在多种类型。代数建模语言 (Algebraic Modeling Language) 是一种基于传统数学符号来描述目标函数与约束函数的流行变体。代数语言提供了计算机可读的数学符号的等价表示，例如 $x_j + y_j$、$\sum_{j = 1}^{n}a_{ij}x_j$、$x_j\geq 0$ 以及 $j\in S$——这些符号对于任何学习过代数或微积分的人都十分熟悉。熟悉度是代数建模语言的主要优势之一；另一个优势在于它们特别适用于各种线性、非线性和整数规划模型。
 
-While successful algorithms for mathematical programming first came into use in the 1950’s, the development and distribution of algebraic modeling languages only began in the 1970’s. Since then, advances in computing and computer science have enabled such languages to become steadily more efficient and general. 
+尽管数学规划的成功算法早在20世纪50年代就已投入使用，但代数建模语言的开发与推广直到20世纪70年代才正式开始。此后，计算技术与计算机科学的进步使这类语言变得日益通用和高效。
 
-This book describes AMPL , an algebraic modeling language for mathematical programming; it was designed and implemented by the authors around 1985, and has been evolving ever since. AMPL is notable for the similarity of its arithmetic expressions to customary algebraic notation, and for the generality and power of its set and subscripting expressions. AMPL also extends algebraic notation to express common mathematical programming structures such as network flow constraints and piecewise linearities.
+本书是关于 AMPL 的，一种用于数学规划的代数建模语言 (An Algebraic Modeling Language for Mathematical Programming, 缩写即“AMPL”)；它由作者在 1985 年左右设计和实现，自彼时起一路在发展至今。AMPL 以其算术表达式与常规代数符号的相似性及其集合和下标表达式的通用性与强大功能而著称。AMPL 还将代数符号扩展以表达常见的数学规划结构，例如网络流约束 (Network Flow Constraint) 和分段线性规划 (Piecewise Linear)。
+
+本书阐述的是 AMPL，一种数学规划代数建模语言[^2]；该语言由其作者于 1985 年左右设计实现，并持续发展至今。AMPL 以其算术表达式与常规代数符号的高度相似性，以及其集合与下标表达式的通用性和强大功能而著称。同时，AMPL 还扩展了代数符号体系，使其能够表达常见的数学规划结构，例如网络流约束 (Network Flow Constraints) 与分段线性关系 (Piecewise Linearities)。
 
 AMPL offers an interactive command environment for setting up and solving mathematical programming problems. A flexible interface enables several solvers to be available at once so a user can switch among solvers and select options that may improve solver performance. Once optimal solutions have been found, they are automatically translated back to the modeler’s form so that people can view and analyze them. All of the general set and arithmetic expressions of the AMPL modeling language can also be used for displaying data and results; a variety of options are available to format data for browsing, printing reports, or preparing input to other programs. 
 
@@ -132,3 +134,4 @@ Robert Fourer,“Modeling Languages versus Matrix Generators for Linear Programm
 C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European Journal of Operational Research **67** (1993) 25–51. A survey.
 
 [^1]: **译者注**：在英语中，“Programming”具有“规划”与“编程”的双重含义。
+[^2]: **译者注**：其名称“AMPL”源自英文“An Algebraic Modeling Language for Mathematical Programming”的首字母缩写，即“一种数学规划代数建模语言”。
