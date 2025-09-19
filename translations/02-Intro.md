@@ -37,7 +37,7 @@
 
 尽管矩阵生成器能成功实现从建模者形式到算法形式的部分转换的自动化，它们却仍难以维护和调试。应对此问题的一种有效方案是采用数学规划建模语言 (Modeling Language for Mathematical Programming)。建模语言的设计初衷是用可直接作为计算机系统输入的形式来表达建模者形式。随后向算法形式的转换便能全然由计算机自己完成，无需中间编程的阶段。建模语言有助于使数学规划更加经济可靠；它们在开发新模型和记录需要频繁修改的模型时尤其具有优势。
 
-由于建模者用于表达数学规划的形式不止一种，因此建模语言也存在多种类型。代数建模语言 (Algebraic Modeling Language) 是一种基于传统数学符号来描述目标函数与约束函数的流行变体。代数语言提供了计算机可读的数学符号的等价表示，例如 $x_j + y_j$、$\sum_{j = 1}^{n}a_{ij}x_j$、$x_j\geq 0$ 以及 $j\in S$——这些符号对于任何学习过代数或微积分的人都十分熟悉。熟悉度是代数建模语言的主要优势之一；另一个优势在于它们特别适用于各种线性、非线性和整数规划模型。
+由于建模者用于表达数学规划的形式不止一种，因此建模语言也存在多种类型。代数建模语言 (Algebraic Modeling Language) 是一种基于传统数学符号来描述目标函数与约束函数的流行变体。代数语言提供了计算机可读的数学符号的等价表示，例如 $x_j + y_j$、$\sum_{j = 1}^{n} a_{ij} x_j$、$x_j \geq 0$ 以及 $j\in S$——这些符号对于任何学习过代数或微积分的人都十分熟悉。熟悉度是代数建模语言的主要优势之一；另一个优势在于它们特别适用于各种线性、非线性和整数规划模型。
 
 尽管数学规划的成功算法早在20世纪50年代就已投入使用，但代数建模语言的开发与推广直到20世纪70年代才正式开始。此后，计算技术与计算机科学的进步使这类语言变得日益通用和高效。
 
@@ -134,4 +134,4 @@ Robert Fourer,“Modeling Languages versus Matrix Generators for Linear Programm
 C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European Journal of Operational Research **67** (1993) 25–51. A survey.
 
 [^1]: **译者注**：在英语中，“Programming”具有“规划”与“编程”的双重含义。
-[^2]: **译者注**：其名称“AMPL”源自英文“An Algebraic Modeling Language for Mathematical Programming”的首字母缩写，即“一种数学规划代数建模语言”。
+**译者注**：其名称“AMPL”源自英文“An Algebraic Modeling Language for Mathematical Programming”的首字母缩写，即“一种数学规划代数建模语言”。
