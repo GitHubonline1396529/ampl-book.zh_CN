@@ -1,6 +1,6 @@
 # 介绍
 
-正如书题所述，我们所探讨的主题包含两个方面。其一是数学规划 (Mathematical Programming)，即在满足约束条件的前提下，对多变量函数进行优化；其二是 AMPL 建模语言，这是我们为了帮助人们利用计算机开发与应用数学规划模型而设计并实现的语言工具。
+正如书题所言，我们所探讨的主题包含两个方面。其一是数学规划 (Mathematical Programming)，即在满足约束条件的前提下，对多变量函数进行优化；其二是 AMPL 建模语言，这是我们为了帮助人们利用计算机开发与应用数学规划模型而设计并实现的语言工具。
 
 本书旨在作为数学规划与 AMPL 的入门介绍。对于已经熟悉数学规划的读者而言，本书也可作为 AMPL 软件的用户指南与参考手册。不过，我们并不假设读者具备相关的预备知识，同时也希望本书能够鼓励初学者学习并运用数学规划模型。
 
@@ -8,11 +8,13 @@
 
 “规划 (Programming)” 这一术语在 1940 年前后已被用于描述大型组织内部活动的计划或调度。“计划员” (Programmers) 们发现，他们可以将每项活动的数量或水平表示为一个变量 (Variable)，其数值有待确定。随后，他们能够用数学的方式将计划或调度问题中固有的约束条件 (Constraints) 描述为一组涉及这些变量的方程或不等式。满足所有这些约束条件的解，将被视为可接受的计划或调度方案。
 
-实践很快表明：仅仅通过规定约束条件来刻画一个复杂的操作是十分困难的。若约束条件过少，许多劣质的解也能满足它们；若约束条件过多，则会将理想的解排除在外，甚至在最糟糕的情况下可能根本不存在可行解。规划的成功最终依赖于一个得以为上述困境提供出路的关键的洞见。除了约束条件之外，还可以额外指定一个目标 (Objective)——即变量的某个函数 (如成本或利润)，以此判断一个解是否优于另一个解。这样一来，即使有许多不同的解能够满足约束条件，也无关紧要——只需找到一个能使目标函数最小化或最大化的解即可。“数学规划”一词由此被用来描述：在变量受到约束条件限制的情况下，最小化或最大化多变量的目标函数的过程。
+实践很快表明：仅仅通过规定约束条件来刻画一个复杂的操作是十分困难的。若约束条件过少，则许多劣质的解也能满足它们；若约束条件过多，则会将理想的解排除在外，或者在最糟糕的情况下，根本不存在可行解。规划的成功最终依赖于一个得以为上述困境提供出路的关键的洞见。除了约束条件之外，还可以额外指定一个目标——即变量的某个函数 (如成本或利润)，以此判断一个解是否优于另一个解。这样一来，即使有许多不同的解能够满足约束条件，也无关紧要——只需找到一个能使目标函数最小化或最大化的解即可。“数学规划”一词由此被用来描述：在变量受到约束条件限制的情况下，最小化或最大化多变量的目标函数的过程。
 
-在数学规划的逐步发展与应用过程中，有一类特殊情形愈发凸显：所有成本、需求及其他相关量均严格与各项活动的水平成正比，或是此类各项的和。用数学的术语来讲，这意味着目标函数是一个线性函数 (Linear Function)，而约束条件均是线性的方程与不等式。此类问题被称为线性问题 (Linear Program)，而建立此类问题并求解的过程称为线性规划 (Linear Programming)。线性规划具有特别重要的意义，因为多种多样的问题都可以建模为线性规划，而且即使变量与约束的数量多达数千个，仍能有快速且可靠的方法求解线性规划。同时，线性规划的思想对于分析和求解那些非线性的数学规划问题也很重要。
+经验很快表明，仅仅通过指定约束条件来建模复杂操作是很困难的。如果约束条件太少，许多劣质解可能满足它们；如果约束条件太多，则排除了理想的解，或者在最坏的情况下，可能没有可行解。编程的成功最终取决于一个关键的洞见，以提供一种绕过这一困难的方法。除了约束条件之外，还可以指定一个目标 (Objective)：一个变量的函数（如成本或利润），用于判断一个解是否优于另一个解。这样一来，许多不同的解满足约束条件就无关紧要了——只需找到一个使目标函数最小化或最大化的解即可。术语“数学规划”开始用来描述在变量约束条件下，对多变量目标函数的最小化或最大化。
 
-所有能够有效求解线性规划的方法都需要借助计算机。因此，线性规划的研究大多兴起于 20 世纪 40 年代末——当时计算机已明确可用于科学计算领域。首个成功的线性规划计算方法——单纯形法——便是在这一时期提出的，并在随后十年间通过日益高效的实现方式不断发展完善。巧合的是，计算机的发展使“编程 (Programming)[^1]”一词拥有了如今更为人熟知的含义。
+在数学规划的逐步发展与应用过程中，有一类特殊情形备受瞩目：所有成本、需求及其他相关量均严格与各项活动的水平成正比，或是此类各项的和。用数学的术语来讲，这意味着目标函数是一个线性函数 (Linear Function)，而约束条件均是线性的方程与不等式。此类问题被称为线性问题 (Linear Program)，而建立此类问题并求解的过程称为线性规划 (Linear Programming)。线性规划具有特别重要的意义，因为多种多样的问题都可以建模为线性规划，而且即使变量与约束的数量多达数千个，仍能有快速且可靠的方法求解线性规划。同时，线性规划的思想对于分析和求解那些非线性的数学规划问题也很重要。
+
+所有能够有效求解线性规划的方法都需要借助计算机。因此，线性规划的研究大多兴起于 20 世纪 40 年代末——当时已明确计算机可以被用于科学计算领域。首个成功的线性规划计算方法——单纯形法 (Simplex Method)——便是在这一时期提出的，并在随后十年间通过日益高效的实现方式不断发展完善。巧合的是，计算机的发展使“编程 (Programming)”一词如今拥有了更为人熟知的含义[^1]。
 
 尽管线性规划具有广泛的应用性，但其线性假设有时仍过于理想化。如果在目标函数或约束条件中使用了变量的某些光滑的非线性函数 (Nonlinear Functions)，则该问题被称为非线性规划。此类问题的求解更为困难，但在实践中并非不可能。尽管对非线性函数最优值的研究已持续了两个多世纪，但多变量非线性规划的计算方法直到近几十年，在线性规划方法取得成功之后，才得以发展。因此，数学规划领域也被称为大规模优化 (Large Scale Optimization)，以区别于数学分析中的经典最优化课题。
 
@@ -25,19 +27,17 @@
 - 用数学公式表述一个模型，即构建变量、目标函数和约束条件的抽象系统，用于表示待解问题的一般形式。
 - 收集用以定义一个特定问题实例的数据。
 - 根据模型和数据，生成特定的目标函数和约束。
-- 通过运行一个程序——或者说，求解器 (solver)——来求解该问题实例，应用算法以找到变量的最优值。
+- 通过运行一个程序——或者说，求解器 (Solver)——来求解该问题实例，应用算法以找到变量的最优值。
 - 分析结果。
 - 根据需要改进模型和数据，并重复上述过程。
 
-如果人们能像求解器那样处理数学规划问题，那么建模中的表述和生成阶段或许会相对来讲更直截了当 (straightforward) 一些。然而现实是，人类建模者理解问题的形式与求解器算法处理问题的形式之间存在诸多差异。因此，将模型的表述从“建模者形式” (modeler’s form) 转换到“算法形式” (algorithm’s form) 是一个耗时、成本高昂且往往容易出错的过程。
+如果人们能像求解器那样处理数学规划问题，那么建模中的表述和生成阶段或许会相对来讲更直截了当 (straightforward) 一些。然而现实是，人类建模者理解问题的形式与求解器算法处理问题的形式之间存在诸多差异。因此，将模型的表述从“建模者形式” (Modeler’s Form) 转换到“算法形式” (Algorithm’s form) 是一个耗时、成本高昂且往往容易出错的过程。
 
-在线性规划的特殊情形下，算法形式中最为重大的部分是约束系数矩阵——即所有约束中与所有变量相乘的数值的表格。这通常是一个非常稀疏 (大部分元素为零) 的矩阵，其行数和列数范围从数百到数十万不等，且非零元素呈现错综复杂的分布模式。生成系数矩阵紧凑表示的计算机程序称为矩阵生成器 (matrix generator)。已有若干编程语言被专门设计用于编写矩阵生成器，标准的计算机编程语言也常被应用于此。
+在线性规划的特殊情形下，算法形式中最为重大的部分是约束系数矩阵——即所有约束中与所有变量相乘的数值的表格。这通常是一个非常稀疏 (大部分元素为零) 的矩阵，其行数和列数范围从数百到数十万不等，且非零元素呈现错综复杂的分布模式。生成系数矩阵紧凑表示的计算机程序称为矩阵生成器 (Matrix Generator)。已有若干编程语言被专门设计用于编写矩阵生成器，标准的计算机编程语言也常被应用于此。
 
-虽说矩阵生成器可以成功地自动完成部分从建模者形式到算法形式的转译工作，但它们却始终难以维护和调试。解决这一难题的一种方法是使用一种用于数学规划的建模语言 (modeling language for mathematical programming)。建模语言的设计初衷是以一种可以直接作为计算机系统输入的形式来表达建模者形式。然后，到算法形式的转译可以完全由计算机执行，而无需中间的计算机编程阶段。建模语言可以帮助使数学规划更加可靠和经济；它们在开发新模型和记录应变模型方面特别有优势。
+尽管矩阵生成器能成功实现从建模者形式到算法形式的部分转换的自动化，它们却仍难以维护和调试。应对此问题的一种有效方案是采用数学规划建模语言 (Modeling Language for Mathematical Programming)。建模语言的设计初衷是用可直接作为计算机系统输入的形式来表达建模者形式。随后向算法形式的转换便能全然由计算机自己完成，无需中间编程的阶段。建模语言有助于使数学规划更加经济可靠；它们在开发新模型和记录需要频繁修改的模型时尤其具有优势。
 
-Although matrix generators can successfully automate some of the work of translation from modeler’s form to algorithm’s form, they remain difficult to debug and maintain. One way around much of this difficulty lies in the use of a modeling language for mathematical programming. A modeling language is designed to express the modeler’s form in a way that can serve as direct input to a computer system. Then the translation to the algorithm’s form can be performed entirely by computer, without the intermediate stage of computer programming. Modeling languages can help to make mathematical programming more economical and reliable; they are particularly advantageous for development of new models and for documentation of models that are subject to change. 
-
-Since there is more than one form that modelers use to express mathematical programs, there is more than one kind of modeling language. An algebraic modeling language is a popular variety based on the use of traditional mathematical notation to describe objective and constraint functions. An algebraic language provides computer readable equivalents of notations such as $x_j + y_j, \sum_{j = 1}^n a_{ij} x_j, x_j \geq 0$, and $j \in S$ that would be familiar to anyone who has studied algebra or calculus. Familiarity is one of the major advantages of algebraic modeling languages; another is their applicability to a particularly wide variety of linear, nonlinear and integer programming models.
+由于建模者用于表达数学规划的形式不止一种，因此建模语言也存在多种类型。代数建模语言 (Algebraic Modeling Language) 是一种基于传统数学符号来描述目标函数与约束函数的流行变体。代数语言提供了计算机可读的数学符号的等价表示，例如 $x_j + y_j$、$\sum_{j = 1}^{n}a_{ij}x_j$、$x_j\geq 0$ 以及 $j\in S$——这些符号对于任何学习过代数或微积分的人都十分熟悉。熟悉度是代数建模语言的主要优势之一；另一个优势在于它们特别适用于各种线性、非线性和整数规划模型。
 
 While successful algorithms for mathematical programming first came into use in the 1950’s, the development and distribution of algebraic modeling languages only began in the 1970’s. Since then, advances in computing and computer science have enabled such languages to become steadily more efficient and general. 
 
