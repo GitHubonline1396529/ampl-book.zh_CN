@@ -31,7 +31,7 @@
 - 分析结果。
 - 根据需要改进模型和数据，并重复上述过程。
 
-如果人们能像求解器那样处理数学规划问题，那么建模中的表述和生成阶段或许会相对来讲更直截了当 (straightforward) 一些。然而现实是，人类建模者理解问题的形式与求解器算法处理问题的形式之间存在诸多差异。因此，将模型的表述从“建模者形式” (Modeler’s Form) 转换到“算法形式” (Algorithm’s form) 是一个耗时、成本高昂且往往容易出错的过程。
+如果人们能像求解器那样处理数学规划问题，那么建模中的表述和生成阶段或许会相对来讲更直截了当 (straightforward) 一些。然而现实是，人类建模者理解问题的形式与求解器算法处理问题的形式之间存在诸多差异。因此，将模型的表述从“建模者形式” (Modeler’s Form) 转换到“算法形式” (Algorithm’s form)[^2] 是一个耗时、成本高昂且往往容易出错的过程。
 
 在线性规划的特殊情形下，算法形式中最为重大的部分是约束系数矩阵——即所有约束中与所有变量相乘的数值的表格。这通常是一个非常稀疏 (大部分元素为零) 的矩阵，其行数和列数范围从数百到数十万不等，且非零元素呈现错综复杂的分布模式。生成系数矩阵紧凑表示的计算机程序称为矩阵生成器 (Matrix Generator)。已有若干编程语言被专门设计用于编写矩阵生成器，标准的计算机编程语言也常被应用于此。
 
@@ -45,7 +45,7 @@
 
 本书阐述的是 AMPL，一种数学规划代数建模语言[^2]；该语言由其作者于 1985 年左右设计实现，并持续发展至今。AMPL 以其算术表达式与常规代数符号的高度相似性，以及其集合与下标表达式的通用性和强大功能而著称。同时，AMPL 还扩展了代数符号体系，使其能够表达常见的数学规划结构，例如网络流约束 (Network Flow Constraints) 与分段线性关系 (Piecewise Linearities)。
 
-AMPL offers an interactive command environment for setting up and solving mathematical programming problems. A flexible interface enables several solvers to be available at once so a user can switch among solvers and select options that may improve solver performance. Once optimal solutions have been found, they are automatically translated back to the modeler’s form so that people can view and analyze them. All of the general set and arithmetic expressions of the AMPL modeling language can also be used for displaying data and results; a variety of options are available to format data for browsing, printing reports, or preparing input to other programs. 
+AMPL 提供了一个用于构建和求解数学规划问题的交互式命令环境。其灵活的接口支持同时使用多个求解器，因此用户可以在不同求解器之间切换，并选用可提升求解性能的选项。一旦求得最优解 (Optimal Solution)，结果会自动转换回建模者可读的形式，便于用户查看与分析。AMPL 建模语言的所有通用集合及算术表达式也可用于展示数据和结果；提供多种数据格式化选项，支持浏览、打印报表或为其他程序准备输入数据。
 
 Through its emphasis on AMPL, this book differs considerably from the presentation of modeling in standard mathematical programming texts. The approach taken by a typical textbook is still strongly influenced by the circumstances of 30 years ago, when a student might be lucky to have the opportunity to solve a few small linear programs on any actual computer. As encountered in such textbooks, mathematical programming often appears to require only the conversion of a “word problem” into a small system of inequalities and an objective function, which are then presented to a simple optimization package that prints a short listing of answers. While this can be a good approach for introductory purposes, it is not workable for dealing with the hundreds or thousands of variables and constraints that are found in most real-world mathematical programs. 
 
@@ -135,3 +135,5 @@ C. A. C. Kuip, “Algebraic Languages for Mathematical Programming.” European 
 
 [^1]: **译者注**：在英语中，“Programming”具有“规划”与“编程”的双重含义。
 **译者注**：其名称“AMPL”源自英文“An Algebraic Modeling Language for Mathematical Programming”的首字母缩写，即“一种数学规划代数建模语言”。
+
+[^2]: **译者注**：此处“建模者形式”是指易于建模者浏览、阅读和理解的模型的数学表述，而“算法形式”是指可以直接被计算机读取并应用算法求解的形式。
