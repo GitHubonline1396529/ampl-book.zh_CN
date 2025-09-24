@@ -47,7 +47,9 @@
 
 AMPL 提供了一个用于构建和求解数学规划问题的交互式命令环境。其灵活的接口支持同时使用多个求解器，因此用户可以在不同求解器之间切换，并选用可提升求解性能的选项。一旦求得最优解 (Optimal Solution)，结果会自动转换回建模者可读的形式，便于用户查看与分析。AMPL 建模语言的所有通用集合及算术表达式也可用于展示数据和结果；提供多种数据格式化选项，支持浏览、打印报表或为其他程序准备输入数据。
 
-Through its emphasis on AMPL, this book differs considerably from the presentation of modeling in standard mathematical programming texts. The approach taken by a typical textbook is still strongly influenced by the circumstances of 30 years ago, when a student might be lucky to have the opportunity to solve a few small linear programs on any actual computer. As encountered in such textbooks, mathematical programming often appears to require only the conversion of a “word problem” into a small system of inequalities and an objective function, which are then presented to a simple optimization package that prints a short listing of answers. While this can be a good approach for introductory purposes, it is not workable for dealing with the hundreds or thousands of variables and constraints that are found in most real-world mathematical programs. 
+由于强调 AMPL，本书在建模的呈现方式上与标准数学规划教材有很大不同。传统教科书的方法论仍深受 30 年前情况的影响，当时学生能有机会在实际计算机上求解几个小型线性规划问题已是幸运。在这些教科书中，数学规划往往只涉及将“文字问题”转换为一组小型不等式和目标函数，然后提交给一个简单的优化软件包，输出一份简短的答案列表。虽然这种方法在入门教学中可能是有效的，但它无法应对现实世界中数学规划问题常见的成百上千个变量和约束。
+
+本书因强调 AMPL 的使用，在建模内容的呈现方式上与标准的数学规划教材存在显著的差异。典型教科书所采用的方法仍深受三十年前环境的影响——当时学生但凡能在真正的计算机上求解几个小型线性规划问题就已经很幸运了。在此类教材中，数学规划往往仅涉及将“文字问题”转化为包含若干不等式和目标函数的小型系统，随后提交给简单的优化软件包并输出简短的答案列表。尽管这种方法适用于入门教学，却无法应对现实数学规划问题中随处可见的成百上千个变量与约束。
 
 The availability of an algebraic modeling language makes it possible to emphasize the kinds of general models that can be used to describe large-scale optimization problems. Each AMPL model in this book describes a whole class of mathematical programming problems, whose members correspond to different choices of indexing sets and numerical data. Even though we use relatively small data sets for illustration, the resulting problems tend to be larger than those of the typical textbook. More important, the same approach, using still larger data sets, works just as well for mathematical programs of realistic size and practical value.
 
